@@ -12,6 +12,7 @@ import { NavbarComponent } from './component/shared/navbar/navbar.component';
 import { WorksComponent } from './component/works/workscomponent';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InfiniteTypeDeleteModule } from "ngx-sbz-type-delete";
 
 const FEATURE_COMPONENT = [
   AppComponent,
@@ -35,7 +36,8 @@ const SHARED_COMPONENT = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    InfiniteTypeDeleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
