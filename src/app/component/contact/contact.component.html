@@ -2,18 +2,36 @@
   <span>05 : Contact</span>
 </div>
 
-<div>
+<div class="container-wrap">
   <div class="content-wrap">
-    <div>
+    <div class="form">
       <input placeholder="Email">
       <input placeholder="Subject">
       <textarea placeholder="Enter your message"></textarea>
       <button>
         Send
       </button>
+      <p class="success">Your message has successfully sent</p>
+      <p class="failed">Something went wrong, please try again later.</p>
     </div>
     <div>
-      <img>
+      <p>
+        <fa-icon [icon]="faPhone"></fa-icon>
+        +886 9 27 427 325
+      </p>
+      <p>
+        <fa-icon [icon]="faAt"></fa-icon>
+        sydeng102@gmail.com
+      </p>
+      <h3>Follow me on social networks</h3>
+      <div>
+        <a href="https://www.linkedin.com" target="_blank">
+          <fa-icon [icon]="faLinkedin"></fa-icon>
+        </a>
+        <a href="https://github.com/Claudia-teng" target="_blank">
+          <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+      </div>
     </div>
   </div>
 </div>

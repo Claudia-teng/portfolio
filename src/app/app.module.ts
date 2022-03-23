@@ -11,6 +11,8 @@ import { BlogCardComponent } from './component/shared/blog-card/blog-card.compon
 import { NavbarComponent } from './component/shared/navbar/navbar.component';
 import { WorksComponent } from './component/works/workscomponent';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 const FEATURE_COMPONENT = [
   AppComponent,
   HomeComponent,
@@ -32,9 +34,12 @@ const SHARED_COMPONENT = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
