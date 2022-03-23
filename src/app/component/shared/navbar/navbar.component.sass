@@ -1,0 +1,22 @@
+@import '../../../../styles'
+
+div
+  background-color: #000
+  height: 10%
+  display: flex
+  align-items: center
+
+ul
+  color: #fff
+  list-style-type: none
+  margin: 0
+  display: flex
+
+li
+  &:hover
+    font-weight: bold
+    cursor: pointer
+  &:not(:last-child)
+    margin-right: 2rem
+    border-right: 1px solid #fff
+    padding-right: 2rem

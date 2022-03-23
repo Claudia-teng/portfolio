@@ -1,0 +1,34 @@
+.background
+  height: 90%
+  background-image: url("../../../assets/home.jpg")
+  background-size: cover
+  position: relative
+  > div
+    position: absolute
+    bottom: 30%
+    left: 10%
+  > div 
+    > p
+      margin: .5rem 0rem
+      color: #fff
+      font-size: 2.5rem
+      font-weight: bold
+      animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite
+      border-right: .15em solid #fff
+      white-space: nowrap
+      margin: 0 auto
+      overflow: hidden
+
+/* The typing effect */
+@keyframes typing 
+  from 
+    width: 0 
+  to 
+    width: 100% 
+
+/* The typewriter cursor effect */
+@keyframes blink-caret 
+  from, to
+    border-color: transparent 
+  50% 
+    border-color: #fff 
