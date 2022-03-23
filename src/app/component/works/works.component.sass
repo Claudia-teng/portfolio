@@ -1,3 +1,5 @@
+@import '../../../styles/_mixin'
+  
 .container-wrap
   display: flex
   justify-content: center
@@ -6,4 +8,13 @@
   max-width: 1400px
   flex-wrap: wrap
 blog-card
+  width: 30%
   margin: 1rem
+
+@include breakpoint(pad)
+  blog-card
+    width: 40%
+
+@include breakpoint(phone)
+  blog-card
+    width: 80%
