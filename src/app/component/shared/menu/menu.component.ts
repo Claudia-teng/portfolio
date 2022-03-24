@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 @Component({
-  selector: 'navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.sass']
+  selector: 'menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.sass']
 })
-export class NavbarComponent {
+export class MenuComponent {
   public faBars = faBars;
   public displayMenu = false;
 
