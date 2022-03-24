@@ -2,12 +2,15 @@
   display: flex
   justify-content: center
 .content-wrap
-  max-width: 1200px
+  max-width: 1000px
   width: 100%
   display: flex
+  > div:first-child
+    flex: 2.5
+  > div:nth-child(2)
+    flex: 1.5
   > div
     padding: 2rem
-    flex: 1
     input, textarea
       width: 100%
       display: block
@@ -16,11 +19,14 @@
       border: 1px solid #000
       border-radius: 0px
       height: 1rem
+      font-family: 'Roboto Mono', 'Helvetica'
+      font-size: 0.8rem
     textarea
       height: 50%
       resize: none
     button
       padding: 0.5rem 0.9rem
+      font-size: 0.8rem
     &.form > p
       font-size: 0.8rem
       width: 100%

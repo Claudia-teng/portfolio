@@ -7,3 +7,17 @@
   display: flex
   > div
     flex: 1
+  > div:first-child 
+    span, a
+      color: #457b9d
+      font-weight: bold
+    a
+      cursor: pointer
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  > div:nth-child(2) 
+    display: flex
+    justify-content: center
+    img
+      width: 60%
