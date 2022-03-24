@@ -1,15 +1,11 @@
-import { Component } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.sass']
+  styleUrls: ['./navbar.component.sass'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent {
-  public faBars = faBars;
-  public displayMenu = false;
+  
 
-  public showMenu(): void {
-    this.displayMenu = true;
-  }
 }

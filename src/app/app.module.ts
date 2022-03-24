@@ -13,7 +13,6 @@ import { WorksComponent } from './component/works/workscomponent';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InfiniteTypeDeleteModule } from "ngx-sbz-type-delete";
-import { MenuComponent } from './component/shared/menu/menu.component';
 
 const FEATURE_COMPONENT = [
   AppComponent,
@@ -26,8 +25,7 @@ const FEATURE_COMPONENT = [
 
 const SHARED_COMPONENT = [
   NavbarComponent,
-  CardComponent,
-  MenuComponent
+  CardComponent
 ]
 
 @NgModule({

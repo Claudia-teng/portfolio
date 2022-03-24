@@ -1,45 +1,34 @@
 @import '../../../../styles/_mixin'
 
-div
-  background-color: #000
-  height: 7%
-  display: flex
-  align-items: center
-  position: sticky
-  top: 0
-  z-index: 100
-ul
-  color: #fff
-  list-style-type: none
-  margin: 0
-  display: flex
-li
-  &:hover
-    font-weight: bold
-    cursor: pointer
-  &:not(:last-child)
-    margin-right: 2rem
-    border-right: 1px solid #fff
-    padding-right: 2rem
-fa-icon
-  display: none
+.bg-dark
+  background-color: #000 !important
+.navbar-dark .navbar-nav .nav-link
+  color: #fff 
+.nav-link
+  padding-top: 0
+  padding-bottom: 0
+  padding-right: 1.5rem !important
+  padding-left: 1.5rem !important
+  margin: 0.5rem 0rem
+.nav-item:not(:last-child) .nav-link
+  border-right: 1px solid #fff
+.navbar-toggler
+  margin-left: auto
+  &:focus
+    box-shadow: none
 
 @include breakpoint(pad)
-  ul
-    display: none
-  fa-icon
-    display: block
-    font-size: 1.5rem
-    margin: 0rem 1.5rem 0rem auto
-    color: #fff
-    cursor: pointer
+  nav
+    height: unset
+  .nav-item:not(:last-child) .nav-link
+    border-right: none !important
+  #navbarSupportedContent
+    margin-top: 1rem
 
 @include breakpoint(phone)
-  ul
-    display: none
-  fa-icon
-    display: block
-    font-size: 1.5rem
-    margin: 0rem 1.5rem 0rem auto
-    color: #fff
-    cursor: pointer
+  nav
+    height: unset
+  .nav-item:not(:last-child) .nav-link
+    border-right: none !important
+  #navbarSupportedContent
+    margin-top: 1rem

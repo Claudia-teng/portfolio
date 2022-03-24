@@ -4,13 +4,12 @@
   display: flex
   justify-content: center
 .content-wrap
-  max-width: 1200px
+  max-width: 1000px
   width: 100%
   padding: 0rem 1rem
   display: flex
-  > div
-    flex: 1
   > div:first-child 
+    flex: 1.5
     span, a
       font-weight: bold
     a
@@ -20,17 +19,20 @@
       &:hover
         text-decoration: underline
   > div:nth-child(2) 
+    flex: 1
     display: flex
     justify-content: center
     img
-      width: 60%
+      width: 80%
 
 @include breakpoint(pad)
   .content-wrap
     width: 80%
     display: block
+    padding-bottom: 2rem
 
 @include breakpoint(phone)
   .content-wrap
     width: 100%
     display: block
+    padding-bottom: 2rem
