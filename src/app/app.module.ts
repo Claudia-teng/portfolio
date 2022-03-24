@@ -7,7 +7,7 @@ import { AboutMeComponent } from './component/about-me/about-me.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { HomeComponent } from './component/home/home.component';
-import { BlogCardComponent } from './component/shared/blog-card/blog-card.component';
+import { CardComponent } from './component/shared/card/card.component';
 import { NavbarComponent } from './component/shared/navbar/navbar.component';
 import { WorksComponent } from './component/works/workscomponent';
 
@@ -26,7 +26,7 @@ const FEATURE_COMPONENT = [
 
 const SHARED_COMPONENT = [
   NavbarComponent,
-  BlogCardComponent,
+  CardComponent,
   MenuComponent
 ]
 

@@ -1,3 +1,5 @@
+@import '../../../styles/_mixin'
+
 .container-wrap
   display: flex
   justify-content: center
@@ -15,7 +17,7 @@
       width: 100%
       display: block
       margin: 1rem 0rem
-      padding: 0.8rem
+      padding: 1rem
       border: 1px solid #000
       border-radius: 0px
       height: 1rem
@@ -45,3 +47,13 @@
         filter: grayscale(0%)
       fa-icon
         font-size: 1.5rem
+
+@include breakpoint(pad)
+  .content-wrap
+    display: block
+    width: 80%
+    margin: 0 auto
+
+@include breakpoint(phone)
+  .content-wrap
+    display: block

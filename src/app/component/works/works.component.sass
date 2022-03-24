@@ -4,17 +4,17 @@
   display: flex
   justify-content: center
 .card-wrap
-  display: flex
   max-width: 1400px
-  flex-wrap: wrap
-blog-card
-  width: 30%
+  padding: 0rem 1rem
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+card
   margin: 1rem
 
 @include breakpoint(pad)
-  blog-card
-    width: 40%
+  .card-wrap
+    grid-template-columns: 1fr 1fr
 
 @include breakpoint(phone)
-  blog-card
-    width: 80%
+  .card-wrap
+    grid-template-columns: 1fr
