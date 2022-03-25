@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InfiniteTypeDeleteModule } from "ngx-sbz-type-delete";
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogPostComponent } from './component/blog/blog-post/blog-post.component';
 
 const FEATURE_COMPONENT = [
   AppComponent,
@@ -22,6 +23,7 @@ const FEATURE_COMPONENT = [
   AboutMeComponent,
   WorksComponent,
   BlogComponent,
+  BlogPostComponent,
   ContactComponent,
 ]
 
