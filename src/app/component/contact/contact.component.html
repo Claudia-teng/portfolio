@@ -16,10 +16,14 @@
       <textarea placeholder="Enter your message"
                 formControlName="message">
       </textarea>
-      <button (click)="onSubmit()"
-        [ngClass]="{error: contactForm.status==='INVALID'}"
+      <button *ngIf="!processing"
+        (click)="onSubmit()"
+        [ngClass]="{disabled: contactForm.status==='INVALID'}"
         [disabled]="contactForm.status==='INVALID'">
         Send
+      </button>
+      <button *ngIf="processing" class="disabled">
+        Processing...
       </button>
       <p *ngIf="sentContact && success" 
         class="hint success">

@@ -17,6 +17,7 @@ export class ContactComponent {
   public faGithub = faGithub;
 
   public contactForm!: FormGroup;
+  public processing: boolean = false;
   public sentContact: boolean = false;
   public success: boolean = false;
 
@@ -33,7 +34,7 @@ export class ContactComponent {
 
   public onSubmit(): void {
     console.log('this.contactForm', this.contactForm)
-
+    this.processing = true;
     const contactForm: Contact = {
       email: this.contactForm.value.email,
       subject: this.contactForm.value.subject,
@@ -41,9 +42,10 @@ export class ContactComponent {
     }
     console.log('contactForm', contactForm)
     this.portfolioService.sendContactForm(contactForm).subscribe(res => {
+      this.processing = false;
       this.sentContact = true;
       this.success = res.response === 'ok' ? true : false;
       this.contactForm.reset();
-    })
+    });
   }
 }
