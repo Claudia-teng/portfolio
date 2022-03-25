@@ -46,6 +46,10 @@ export class ContactComponent {
       this.sentContact = true;
       this.success = res.response === 'ok' ? true : false;
       this.contactForm.reset();
+    }, (err) => {
+      this.processing = false;
+      this.sentContact = true;
+      this.success = false;
     });
   }
 }
