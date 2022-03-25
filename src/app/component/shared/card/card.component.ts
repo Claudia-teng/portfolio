@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.sass']
 })
 export class CardComponent {
-  title = 'claudia-teng.github.io';
+  @Input() title: string = '';
+  @Input() intro: string = '';
+  @Input() imgPath: string = '';
+  @Input() url: string = '';
 }

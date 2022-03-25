@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { works } from './works';
 
 @Component({
   selector: 'works',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class WorksComponent {
   title = 'claudia-teng.github.io';
+  works = works;
 }
