@@ -10,4 +10,8 @@ export class CardComponent {
   @Input() intro: string = '';
   @Input() imgPath: string = '';
   @Input() url: string = '';
+
+  public openProjectPage(url: string): void {
+    window.open(url, "_blank")
+  }
 }
