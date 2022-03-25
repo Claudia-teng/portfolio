@@ -4,7 +4,12 @@
 
 <div class="container-wrap">
   <div class="card-wrap">
-    <card></card>
+    <card *ngFor="let work of works"
+      [title]="work.title"
+      [intro]="work.intro"
+      [imgPath]="work.imgPath"
+      [url]="work.url">
+    </card>
     <card></card>
     <card></card>
     <card></card>
