@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FormGroup, Validators, FormBuilder} from '@angular/forms';
+import { Contact } from 'src/app/model';
+import { PortfolioService } from 'src/app/service';
 
 @Component({
   selector: 'contact',
@@ -8,9 +11,39 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./contact.component.sass']
 })
 export class ContactComponent {
-  faPhone = faPhone;
-  faAt = faAt;
-  faLinkedin = faLinkedin;
-  faGithub = faGithub
-  title = 'claudia-teng.github.io';
+  public faPhone = faPhone;
+  public faAt = faAt;
+  public faLinkedin = faLinkedin;
+  public faGithub = faGithub;
+
+  public contactForm!: FormGroup;
+  public sentContact: boolean = false;
+  public success: boolean = false;
+
+  constructor(private portfolioService: PortfolioService,
+              private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.contactForm = this.fb.group({
+      email: ['', Validators.email],
+      subject: ['', Validators.required],
+      message: ['', Validators.required]
+    })
+  }
+
+  public onSubmit(): void {
+    console.log('this.contactForm', this.contactForm)
+
+    const contactForm: Contact = {
+      email: this.contactForm.value.email,
+      subject: this.contactForm.value.subject,
+      message: this.contactForm.value.message
+    }
+    console.log('contactForm', contactForm)
+    this.portfolioService.sendContactForm(contactForm).subscribe(res => {
+      this.sentContact = true;
+      this.success = res.response === 'ok' ? true : false;
+      this.contactForm.reset();
+    })
+  }
 }

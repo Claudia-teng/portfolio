@@ -13,6 +13,8 @@ import { WorksComponent } from './component/works/workscomponent';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InfiniteTypeDeleteModule } from "ngx-sbz-type-delete";
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const FEATURE_COMPONENT = [
   AppComponent,
@@ -36,6 +38,8 @@ const SHARED_COMPONENT = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     FontAwesomeModule,
     InfiniteTypeDeleteModule
   ],

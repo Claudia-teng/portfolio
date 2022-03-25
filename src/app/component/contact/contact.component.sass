@@ -29,16 +29,27 @@
     button
       padding: 0.5rem 0.9rem
       font-size: 0.8rem
-    &.form > p
-      font-size: 0.8rem
-      width: 100%
-      color: #fff
-      padding: 1rem
-      margin-top: 1.5rem
-      &.success
-        background-color: #000
-      &.failed
-        background-color: red
+    button.error
+      cursor: unset
+      opacity: 0.3
+      &:hover
+        opacity: 0.3
+        background-color: #fff
+        color: #000
+    &.form
+      p.warning
+        font-size: 0.8rem
+        color: red
+      p.hint
+        font-size: 0.8rem
+        width: 100%
+        color: #fff
+        padding: 1rem
+        margin-top: 1.5rem
+        &.success
+          background-color: #000
+        &.failed
+          background-color: red
     a
       filter: grayscale(100%)
       margin-right: 1rem

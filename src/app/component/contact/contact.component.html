@@ -4,15 +4,31 @@
 
 <div class="container-wrap">
   <div class="content-wrap">
-    <div class="form">
-      <input placeholder="Email">
-      <input placeholder="Subject">
-      <textarea placeholder="Enter your message"></textarea>
-      <button>
+    <div class="form" [formGroup]="contactForm">
+      <input placeholder="Email"
+            formControlName="email">
+      <p *ngIf="contactForm.get('email')?.status==='INVALID' && contactForm.get('email')?.touched"
+        class="warning">
+        Please enter a valid email.
+      </p>
+      <input placeholder="Subject"
+            formControlName="subject">
+      <textarea placeholder="Enter your message"
+                formControlName="message">
+      </textarea>
+      <button (click)="onSubmit()"
+        [ngClass]="{error: contactForm.status==='INVALID'}"
+        [disabled]="contactForm.status==='INVALID'">
         Send
       </button>
-      <p class="success">Your message has been successfully sent.</p>
-      <!-- <p class="failed">Something went wrong, please try again later.</p> -->
+      <p *ngIf="sentContact && success" 
+        class="hint success">
+        Your message has been successfully sent.
+      </p>
+      <p *ngIf="sentContact && !success" 
+        class="hint failed">
+        Something went wrong, please try again later.
+      </p>
     </div>
     <div>
       <p>
