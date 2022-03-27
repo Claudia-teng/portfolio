@@ -15,7 +15,7 @@ export const works = [
   },
   {
     title: 'Where\'s Youbike :)',
-    intro: 'Check for avalible bikes/docks by Youbike station map.',
+    intro: 'Check for available bikes/docks by Youbike station map.',
     imgPath: 'assets/works/wheres-youbike.png',
     url: 'https://github.com/Claudia-teng/tw-bicycle-map',
     tags: ['Angular', 'SASS', 'Leaflet.js', 'RWD']
