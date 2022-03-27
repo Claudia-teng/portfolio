@@ -5,7 +5,8 @@
 <div class="container-wrap">
   <div class="content-wrap">
     <div class="form" [formGroup]="contactForm">
-      <input placeholder="Email"
+      <input type="email"
+            placeholder="Email"
             formControlName="email">
       <p *ngIf="contactForm.get('email')?.status==='INVALID' && contactForm.get('email')?.touched"
         class="warning">
@@ -45,7 +46,7 @@
       </p>
       <h4>Follow me on social networks</h4>
       <div>
-        <a href="https://www.linkedin.com" target="_blank">
+        <a href="https://www.linkedin.com/in/claudia-teng-1ba3a1ba/" target="_blank">
           <fa-icon [icon]="faLinkedin"></fa-icon>
         </a>
         <a href="https://github.com/Claudia-teng" target="_blank">
