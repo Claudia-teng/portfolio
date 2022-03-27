@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'card',
@@ -10,6 +11,8 @@ export class CardComponent {
   @Input() intro: string = '';
   @Input() imgPath: string = '';
   @Input() url: string = '';
+  @Input() tags: Array<string> = [];
+  public faUpRightFromSquare = faUpRightFromSquare;
 
   public openProjectPage(url: string): void {
     window.open(url, "_blank")

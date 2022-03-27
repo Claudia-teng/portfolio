@@ -1,10 +1,13 @@
 <div class="background">
-  <img alt="" [src]="imgPath"/>
+  <div class="img-container">
+    <img alt="" [src]="imgPath"/>
+  </div>
   <div class="text-card">
     <h1>{{ title }}</h1>
     <p>{{ intro }}</p>
     <button (click)="openProjectPage(url)">
       View More
     </button>
+    <span *ngFor="let tag of tags"># {{ tag }}</span>
   </div>
 </div>
