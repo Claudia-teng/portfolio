@@ -14,9 +14,8 @@ export class BlogPostComponent {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.queryParams
-      .subscribe(params => {
-        this.filePath = params['filePath']
-      })
+    this.route.params.subscribe(param => {
+      this.filePath = `assets/blog/${param['id']}/${param['id']}.md`;
+    })
   }  
 }

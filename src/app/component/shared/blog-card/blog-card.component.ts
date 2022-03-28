@@ -16,9 +16,6 @@ export class BlogCardComponent {
   constructor(private router: Router) {}
 
   public navigateToPost(): void {
-    this.router.navigate(
-      [`/blog/${this.id}`], 
-      { queryParams: { filePath: this.filePath }}
-    )
+    this.router.navigate([`/blog/${this.id}`])
   }
 }
