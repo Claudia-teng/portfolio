@@ -5,7 +5,7 @@ import { BlogPostComponent } from './component/blog/blog-post/blog-post.componen
 import { BlogComponent } from './component/blog/blog.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { HomeComponent } from './component/home/home.component';
-import { WorksComponent } from './component/works/workscomponent';
+import { WorksComponent } from './component/works/works.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

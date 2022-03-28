@@ -1,3 +1,15 @@
 <div class="page-title">
   <span>04 : Blog</span>
 </div>
+
+<div class="container-wrap">
+  <div class="card-wrap">
+    <blog-card *ngFor="let blog of blogs"
+      [id]="blog.id"
+      [title]="blog.title"
+      [intro]="blog.intro"
+      [imgPath]="blog.imgPath"
+      [filePath]="blog.filePath">
+    </blog-card>
+  </div>
+</div>

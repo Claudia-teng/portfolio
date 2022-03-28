@@ -1,0 +1,20 @@
+@import '../../../styles/_mixin'
+  
+.container-wrap
+  display: flex
+  justify-content: center
+.card-wrap
+  max-width: 1400px
+  padding: 0rem 1rem
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+blog-card
+  margin: 1rem
+
+@include breakpoint(pad)
+  .card-wrap
+    grid-template-columns: 1fr 1fr
+
+@include breakpoint(phone)
+  .card-wrap
+    grid-template-columns: 1fr

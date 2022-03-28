@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.sass']
+  selector: 'work-card',
+  templateUrl: './work-card.component.html',
+  styleUrls: ['./work-card.component.sass']
 })
 export class CardComponent {
   @Input() title: string = '';

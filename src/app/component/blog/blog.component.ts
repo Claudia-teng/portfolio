@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { blogs } from './blogs';
 
 @Component({
   selector: 'blog',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
   title = 'claudia-teng.github.io';
+  blogs = blogs;
 }

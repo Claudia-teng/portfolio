@@ -4,12 +4,12 @@
 
 <div class="container-wrap">
   <div class="card-wrap">
-    <card *ngFor="let work of works"
+    <work-card *ngFor="let work of works"
       [title]="work.title"
       [intro]="work.intro"
       [imgPath]="work.imgPath"
       [url]="work.url"
       [tags]="work.tags">
-    </card>
+    </work-card>
   </div>
 </div>
