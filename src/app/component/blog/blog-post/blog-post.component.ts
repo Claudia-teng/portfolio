@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'blog-post',
   templateUrl: './blog-post.component.html',
-  styleUrls: ['./blog-post.component.sass']
+  styleUrls: ['./blog-post.component.sass'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BlogPostComponent {
   public faArrowLeft = faArrowLeft;
