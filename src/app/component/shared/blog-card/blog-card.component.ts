@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class BlogCardComponent {
   @Input() id: number = 1;
+  @Input() date: string = '';
   @Input() title: string = '';
   @Input() intro: string = '';
   @Input() imgPath: string = '';

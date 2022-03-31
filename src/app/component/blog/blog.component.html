@@ -6,6 +6,7 @@
   <div class="card-wrap">
     <blog-card *ngFor="let blog of blogs"
       [id]="blog.id"
+      [date]="blog.date"
       [title]="blog.title"
       [intro]="blog.intro"
       [imgPath]="blog.imgPath"
