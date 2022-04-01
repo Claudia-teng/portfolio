@@ -6,5 +6,13 @@ export const blogs = [
     intro: 'Array資料結構其實也能透過JavaScript自己實作！此篇會介紹怎麼用Object來實作Array，以及自己寫出一些常見的Array Method。',
     imgPath: 'assets/blog/1/1-1.jpg',
     filePath: 'assets/blog/1/1.md'
+  },
+  {
+    id: 2,
+    date: '2022/04/01',
+    title: 'Data Structure - Hash Tables | 一個坑不只有一個蘿蔔！JavaScript的Hash Tables是什麼？',
+    intro: '。',
+    imgPath: 'assets/blog/1/1-1.jpg',
+    filePath: 'assets/blog/2/2.md'
   }
 ]
