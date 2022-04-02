@@ -1,7 +1,10 @@
+@import '../../../../styles/_mixin'
+
 blog-post
   a.back   
-    display: inline-block
-    margin: 6rem 0rem 2rem 3rem
+    position: fixed
+    top: 10%
+    left: 5%
     cursor: pointer
     color: #000
   fa-icon
@@ -9,11 +12,14 @@ blog-post
   .container
     display: flex
     justify-content: center
+    padding-top: 6rem
     > div
       width: 70%
       margin-bottom: 10rem
     p
       font-size: 1.2rem
+      code
+        margin: 0rem 0.5rem
     img
       max-width: 100%
       margin: 1rem auto
@@ -26,4 +32,23 @@ blog-post
       p
         margin-bottom: 0rem
 
+  @include breakpoint(pad)
+    a.back
+      position: unset   
+      display: inline-block
+      margin: 6rem 0rem 2rem 3rem
+    .container
+      padding-top: 0rem
+      > div
+        width: 80%
+
+  @include breakpoint(phone)
+    a.back   
+      position: unset   
+      display: inline-block
+      margin: 6rem 0rem 2rem 3rem
+    .container
+      padding-top: 0rem
+      > div
+        width: 90%
   
