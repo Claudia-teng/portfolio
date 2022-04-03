@@ -1,9 +1,17 @@
 export const blogs = [
   {
+    id: 7,
+    date: '2022/04/03',
+    title: 'JavaScript - FP | 函式也最好不要有「副作用」...？',
+    intro: 'Functional Programming的重點是，盡量讓所有function都是「Pure Function」，而「Pure Function」是什麼？',
+    imgPath: 'assets/blog/7/7-1.png',
+    filePath: 'assets/blog/7/7.md'
+  },
+  {
     id: 6,
     date: '2022/04/03',
     title: 'JavaScript - OOP | 物件導向就是在做模型！',
-    intro: 'OOP是什麼？為什麼要學OOP？物件導向就是在做模型？到底要怎麼用～',
+    intro: 'OOP是什麼？為什麼要學OOP？物件導向就是在做模型？',
     imgPath: 'assets/blog/6/6-1.png',
     filePath: 'assets/blog/6/6.md'
   },
