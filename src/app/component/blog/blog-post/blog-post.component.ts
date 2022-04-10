@@ -11,14 +11,16 @@ import { PortfolioService } from 'src/app/service';
 })
 export class BlogPostComponent {
   public faArrowLeft = faArrowLeft;
-  public filePath: string = '';
+  public content: string = '';
   
   constructor(private route: ActivatedRoute, 
               private portfolioService: PortfolioService) {}
 
   ngOnInit() {
     this.route.params.subscribe(param => {
-      this.filePath = `assets/blog/${param['id']}/${param['id']}.md`;
+      this.portfolioService.getBlogById(param['id']).subscribe(res => {
+        this.content = res.content;
+      })
     })
   }  
 }

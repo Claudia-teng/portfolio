@@ -18,6 +18,10 @@ export class PortfolioService {
     return this.http.get<Array<Blog>>(`https://portfolio-api-claudia.herokuapp.com/blog`);
   }
 
+  public getBlogById(id: number): Observable<Blog> {
+    return this.http.get<Blog>(`https://portfolio-api-claudia.herokuapp.com/blog/${id}`);
+  }
+
   public sendContactForm(contactForm: Contact): Observable<ResponseMessage> {
     return this.http.post<ResponseMessage>(`https://portfolio-api-claudia.herokuapp.com/contact`, contactForm);
   }
