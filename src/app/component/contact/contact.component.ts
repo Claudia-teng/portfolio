@@ -33,14 +33,14 @@ export class ContactComponent {
   }
 
   public onSubmit(): void {
-    console.log('this.contactForm', this.contactForm)
+    // console.log('this.contactForm', this.contactForm)
     this.processing = true;
     const contactForm: Contact = {
       email: this.contactForm.value.email,
       subject: this.contactForm.value.subject,
       message: this.contactForm.value.message
     }
-    console.log('contactForm', contactForm)
+    // console.log('contactForm', contactForm)
     this.portfolioService.sendContactForm(contactForm).subscribe(res => {
       this.processing = false;
       this.sentContact = true;

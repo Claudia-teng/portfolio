@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { works } from './works';
+import { PortfolioService } from 'src/app/service';
+import { Work } from "src/app/model";
 
 @Component({
   selector: 'works',
@@ -7,6 +8,14 @@ import { works } from './works';
   styleUrls: ['./works.component.sass']
 })
 export class WorksComponent {
-  title = 'claudia-teng.github.io';
-  works = works;
+
+  public works: Array<Work> = [];
+
+  constructor(private portfolioService: PortfolioService) {}
+  
+  ngOnInit() {
+    this.portfolioService.getAllWorks().subscribe(res => {
+      this.works = res;
+    })
+  }
 }
