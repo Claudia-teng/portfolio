@@ -4,6 +4,13 @@
 </a>
 
 <div class="container">
-  <div markdown [data]="content">
-</div>
+  <div *ngIf="loading; else showContent"
+      class="lds-dual-ring">
+  </div>
+  <ng-template #showContent>
+    <div markdown 
+        [data]="content"
+        class="markdown">
+    </div>
+  </ng-template>
 </div>

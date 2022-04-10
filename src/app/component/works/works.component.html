@@ -3,13 +3,18 @@
 </div>
 
 <div class="container-wrap">
-  <div class="card-wrap">
-    <work-card *ngFor="let work of works"
-      [title]="work.title"
-      [intro]="work.intro"
-      [imgPath]="work.imgPath"
-      [url]="work.url"
-      [tags]="work.tags">
-    </work-card>
+  <div *ngIf="loading; else cardList"
+      class="lds-dual-ring">
   </div>
+  <ng-template #cardList>
+    <div class="card-wrap">
+      <work-card *ngFor="let work of works"
+        [title]="work.title"
+        [intro]="work.intro"
+        [imgPath]="work.imgPath"
+        [url]="work.url"
+        [tags]="work.tags">
+      </work-card>
+    </div>
+  </ng-template>
 </div>

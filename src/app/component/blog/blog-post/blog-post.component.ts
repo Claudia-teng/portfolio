@@ -12,6 +12,7 @@ import { PortfolioService } from 'src/app/service';
 export class BlogPostComponent {
   public faArrowLeft = faArrowLeft;
   public content: string = '';
+  public loading: boolean = true;
   
   constructor(private route: ActivatedRoute, 
               private portfolioService: PortfolioService) {}
@@ -19,6 +20,7 @@ export class BlogPostComponent {
   ngOnInit() {
     this.route.params.subscribe(param => {
       this.portfolioService.getBlogById(param['id']).subscribe(res => {
+        this.loading = false;
         this.content = res.content;
       })
     })

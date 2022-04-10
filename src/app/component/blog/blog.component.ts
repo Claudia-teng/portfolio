@@ -11,9 +11,11 @@ export class BlogComponent {
   constructor(private portfolioService: PortfolioService) {}
 
   public blogs: Array<Blog> = [];
+  public loading: boolean = true;
 
   ngOnInit() {
     this.portfolioService.getAllBlog().subscribe(res => {
+      this.loading = false;
       this.blogs = res;
     })
   }

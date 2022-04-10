@@ -10,11 +10,13 @@ import { Work } from "src/app/model";
 export class WorksComponent {
 
   public works: Array<Work> = [];
+  public loading: boolean = true;
 
   constructor(private portfolioService: PortfolioService) {}
   
   ngOnInit() {
     this.portfolioService.getAllWorks().subscribe(res => {
+      this.loading = false;
       this.works = res;
     })
   }

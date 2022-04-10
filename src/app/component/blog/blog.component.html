@@ -3,13 +3,18 @@
 </div>
 
 <div class="container-wrap">
-  <div class="card-wrap">
-    <blog-card *ngFor="let blog of blogs"
-      [id]="blog.id"
-      [date]="blog.date"
-      [title]="blog.title"
-      [intro]="blog.intro"
-      [imgPath]="blog.imgPath">
-    </blog-card>
+  <div *ngIf="loading; else cardList"
+      class="lds-dual-ring">
   </div>
+  <ng-template #cardList>
+    <div class="card-wrap">
+      <blog-card *ngFor="let blog of blogs"
+        [id]="blog.id"
+        [date]="blog.date"
+        [title]="blog.title"
+        [intro]="blog.intro"
+        [imgPath]="blog.imgPath">
+      </blog-card>
+    </div>
+  </ng-template>
 </div>
