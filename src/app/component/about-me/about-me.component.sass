@@ -6,7 +6,7 @@
 .content-wrap
   max-width: 1000px
   width: 100%
-  padding: 0rem 1rem
+  padding: 2rem 1rem
   display: flex
   > div:first-child 
     flex: 1.5
@@ -29,10 +29,12 @@
   .content-wrap
     width: 80%
     display: block
-    padding-bottom: 2rem
+    > div:first-child 
+      margin-bottom: 2rem
 
 @include breakpoint(phone)
   .content-wrap
-    width: 100%
+    width: 90%
     display: block
-    padding-bottom: 2rem
+    > div:first-child 
+      margin-bottom: 2rem
