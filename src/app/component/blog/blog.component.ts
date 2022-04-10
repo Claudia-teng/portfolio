@@ -14,7 +14,7 @@ export class BlogComponent {
   public loading: boolean = true;
 
   ngOnInit() {
-    this.portfolioService.getAllBlog().subscribe(res => {
+    this.portfolioService.getAllBlogs().subscribe(res => {
       this.loading = false;
       this.blogs = res;
     })

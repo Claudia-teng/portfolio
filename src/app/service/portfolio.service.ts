@@ -14,7 +14,7 @@ export class PortfolioService {
     return this.http.get<Array<Work>>(`https://portfolio-api-claudia.herokuapp.com/works`);
   }
 
-  public getAllBlog(): Observable<Array<Blog>> {
+  public getAllBlogs(): Observable<Array<Blog>> {
     return this.http.get<Array<Blog>>(`https://portfolio-api-claudia.herokuapp.com/blog`);
   }
 
