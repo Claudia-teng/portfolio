@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { blogs } from './blogs';
-
+import { PortfolioService } from 'src/app/service';
+import { Blog } from "src/app/model";
 @Component({
   selector: 'blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.sass']
 })
 export class BlogComponent {
-  title = 'claudia-teng.github.io';
-  blogs = blogs;
+
+  constructor(private portfolioService: PortfolioService) {}
+
+  public blogs: Array<Blog> = [];
+
+  ngOnInit() {
+    this.portfolioService.getAllBlog().subscribe(res => {
+      this.blogs = res;
+    })
+  }
 }

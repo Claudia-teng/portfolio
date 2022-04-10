@@ -12,7 +12,6 @@ export class BlogCardComponent {
   @Input() title: string = '';
   @Input() intro: string = '';
   @Input() imgPath: string = '';
-  @Input() filePath: string = '';
 
   constructor(private router: Router) {}
 

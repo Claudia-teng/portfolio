@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Contact, ResponseMessage, Work } from "src/app/model";
+import { Contact, ResponseMessage, Work, Blog } from "src/app/model";
 
 @Injectable({ providedIn: 'root' })
 
@@ -12,6 +12,10 @@ export class PortfolioService {
 
   public getAllWorks(): Observable<Array<Work>> {
     return this.http.get<Array<Work>>(`https://portfolio-api-claudia.herokuapp.com/works`);
+  }
+
+  public getAllBlog(): Observable<Array<Blog>> {
+    return this.http.get<Array<Blog>>(`https://portfolio-api-claudia.herokuapp.com/blog`);
   }
 
   public sendContactForm(contactForm: Contact): Observable<ResponseMessage> {

@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioService } from 'src/app/service';
 
 @Component({
   selector: 'blog-post',
@@ -12,7 +13,8 @@ export class BlogPostComponent {
   public faArrowLeft = faArrowLeft;
   public filePath: string = '';
   
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, 
+              private portfolioService: PortfolioService) {}
 
   ngOnInit() {
     this.route.params.subscribe(param => {
